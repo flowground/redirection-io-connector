@@ -1,0 +1,1795 @@
+{
+    "title": "redirection.io",
+    "description": "API documentation for redirection.io",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/redirection.io/1.1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.redirection.io/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "apiKey": {
+                "label": "Authorization (apiKey)",
+                "viewClass": "TextFieldView",
+                "note": "Value for the Authorization header"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "postAgentFlushAggregateRequestCollection": {
+            "main": "./lib/actions/postAgentFlushAggregateRequestCollection.js",
+            "title": "Creates a AgentFlushAggregateRequest resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postAgentFlushAggregateRequestCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_agent_flush_requests": {
+            "main": "./lib/actions/post_agent_flush_requests.js",
+            "title": "Creates a AgentFlushRequest resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_agent_flush_requests.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postInstanceCollection": {
+            "main": "./lib/actions/postInstanceCollection.js",
+            "title": "Creates a Instance resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postInstanceCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putInstanceItem": {
+            "main": "./lib/actions/putInstanceItem.js",
+            "title": "Replaces the Instance resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putInstanceItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "agent_legacy_complexRuleCollection": {
+            "main": "./lib/actions/agent_legacy_complexRuleCollection.js",
+            "title": "Retrieves the collection of Rule resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/agent_legacy_complexRuleCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "agent_legacy_straightRuleCollection": {
+            "main": "./lib/actions/agent_legacy_straightRuleCollection.js",
+            "title": "Retrieves the collection of Rule resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/agent_legacy_straightRuleCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "agentRuleCollection": {
+            "main": "./lib/actions/agentRuleCollection.js",
+            "title": "Retrieves the collection of Rule resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/agentRuleCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAggregateLogCollection": {
+            "main": "./lib/actions/getAggregateLogCollection.js",
+            "title": "Retrieves the collection of AggregateLog resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAggregateLogCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAggregateLogItem": {
+            "main": "./lib/actions/getAggregateLogItem.js",
+            "title": "Retrieves a AggregateLog resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAggregateLogItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getComputedStatisticItem": {
+            "main": "./lib/actions/getComputedStatisticItem.js",
+            "title": "Retrieves a ComputedStatistic resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getComputedStatisticItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getCrawlUrlCollection": {
+            "main": "./lib/actions/getCrawlUrlCollection.js",
+            "title": "Retrieves the collection of CrawlUrl resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCrawlUrlCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getCrawlUrlItem": {
+            "main": "./lib/actions/getCrawlUrlItem.js",
+            "title": "Retrieves a CrawlUrl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCrawlUrlItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getCrawlCollection": {
+            "main": "./lib/actions/getCrawlCollection.js",
+            "title": "Retrieves the collection of Crawl resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCrawlCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postCrawlCollection": {
+            "main": "./lib/actions/postCrawlCollection.js",
+            "title": "Creates a Crawl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postCrawlCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getCrawlItem": {
+            "main": "./lib/actions/getCrawlItem.js",
+            "title": "Retrieves a Crawl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCrawlItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "cancelCrawlItem": {
+            "main": "./lib/actions/cancelCrawlItem.js",
+            "title": "Creates a Crawl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/cancelCrawlItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postExplainUrlCollection": {
+            "main": "./lib/actions/postExplainUrlCollection.js",
+            "title": "Creates a ExplainUrl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postExplainUrlCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getExplainUrlItem": {
+            "main": "./lib/actions/getExplainUrlItem.js",
+            "title": "Retrieves a ExplainUrl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExplainUrlItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "exportRuleCollection": {
+            "main": "./lib/actions/exportRuleCollection.js",
+            "title": "Retrieves the collection of Rule resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/exportRuleCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postImpactRuleChangeCollection": {
+            "main": "./lib/actions/postImpactRuleChangeCollection.js",
+            "title": "Creates a ImpactRuleChange resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postImpactRuleChangeCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImpactRuleChangeItem": {
+            "main": "./lib/actions/getImpactRuleChangeItem.js",
+            "title": "Retrieves a ImpactRuleChange resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImpactRuleChangeItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImportCollection": {
+            "main": "./lib/actions/getImportCollection.js",
+            "title": "Retrieves the collection of Import resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImportCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postImportCollection": {
+            "main": "./lib/actions/postImportCollection.js",
+            "title": "Creates a Import resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postImportCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getImportItem": {
+            "main": "./lib/actions/getImportItem.js",
+            "title": "Retrieves a Import resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getImportItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getInstanceCollection": {
+            "main": "./lib/actions/getInstanceCollection.js",
+            "title": "Retrieves the collection of Instance resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInstanceCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getInstanceItem": {
+            "main": "./lib/actions/getInstanceItem.js",
+            "title": "Retrieves a Instance resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInstanceItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "loggingInstanceItem": {
+            "main": "./lib/actions/loggingInstanceItem.js",
+            "title": "Replaces the Instance resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/loggingInstanceItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getInvitationCollection": {
+            "main": "./lib/actions/getInvitationCollection.js",
+            "title": "Retrieves the collection of Invitation resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvitationCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postInvitationCollection": {
+            "main": "./lib/actions/postInvitationCollection.js",
+            "title": "Creates a Invitation resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postInvitationCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "acceptInvitationItem": {
+            "main": "./lib/actions/acceptInvitationItem.js",
+            "title": "Creates a Invitation resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/acceptInvitationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteInvitationItem": {
+            "main": "./lib/actions/deleteInvitationItem.js",
+            "title": "Removes the Invitation resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteInvitationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getInvitationItem": {
+            "main": "./lib/actions/getInvitationItem.js",
+            "title": "Retrieves a Invitation resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvitationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getLogCollection": {
+            "main": "./lib/actions/getLogCollection.js",
+            "title": "Retrieves the collection of Log resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLogCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getLogItem": {
+            "main": "./lib/actions/getLogItem.js",
+            "title": "Retrieves a Log resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLogItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postMarkerCollection": {
+            "main": "./lib/actions/postMarkerCollection.js",
+            "title": "Creates a Marker resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postMarkerCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteMarkerItem": {
+            "main": "./lib/actions/deleteMarkerItem.js",
+            "title": "Removes the Marker resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteMarkerItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMarkerItem": {
+            "main": "./lib/actions/getMarkerItem.js",
+            "title": "Retrieves a Marker resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMarkerItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putMarkerItem": {
+            "main": "./lib/actions/putMarkerItem.js",
+            "title": "Replaces the Marker resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putMarkerItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postMatchingUrlCollection": {
+            "main": "./lib/actions/postMatchingUrlCollection.js",
+            "title": "Creates a MatchingUrl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postMatchingUrlCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getMatchingUrlItem": {
+            "main": "./lib/actions/getMatchingUrlItem.js",
+            "title": "Retrieves a MatchingUrl resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMatchingUrlItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getNotificationCollection": {
+            "main": "./lib/actions/getNotificationCollection.js",
+            "title": "Retrieves the collection of Notification resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getNotificationCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getNotificationItem": {
+            "main": "./lib/actions/getNotificationItem.js",
+            "title": "Retrieves a Notification resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getNotificationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getOrganizationCollection": {
+            "main": "./lib/actions/getOrganizationCollection.js",
+            "title": "Retrieves the collection of Organization resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getOrganizationCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postOrganizationCollection": {
+            "main": "./lib/actions/postOrganizationCollection.js",
+            "title": "Creates a Organization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postOrganizationCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteOrganizationItem": {
+            "main": "./lib/actions/deleteOrganizationItem.js",
+            "title": "Removes the Organization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteOrganizationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getOrganizationItem": {
+            "main": "./lib/actions/getOrganizationItem.js",
+            "title": "Retrieves a Organization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getOrganizationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putOrganizationItem": {
+            "main": "./lib/actions/putOrganizationItem.js",
+            "title": "Replaces the Organization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putOrganizationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_post_logs": {
+            "main": "./lib/actions/post_post_logs.js",
+            "title": "Creates a AgentFlushRequest resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_post_logs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectCollection": {
+            "main": "./lib/actions/getProjectCollection.js",
+            "title": "Retrieves the collection of Project resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postProjectCollection": {
+            "main": "./lib/actions/postProjectCollection.js",
+            "title": "Creates a Project resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postProjectCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteProjectItem": {
+            "main": "./lib/actions/deleteProjectItem.js",
+            "title": "Removes the Project resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteProjectItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getProjectItem": {
+            "main": "./lib/actions/getProjectItem.js",
+            "title": "Retrieves a Project resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putProjectItem": {
+            "main": "./lib/actions/putProjectItem.js",
+            "title": "Replaces the Project resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putProjectItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPublishHistoryCollection": {
+            "main": "./lib/actions/getPublishHistoryCollection.js",
+            "title": "Retrieves the collection of PublishHistory resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPublishHistoryCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPublishHistoryItem": {
+            "main": "./lib/actions/getPublishHistoryItem.js",
+            "title": "Retrieves a PublishHistory resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPublishHistoryItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRuleChangeCollection": {
+            "main": "./lib/actions/getRuleChangeCollection.js",
+            "title": "Retrieves the collection of RuleChange resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRuleChangeCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postRuleChangeCollection": {
+            "main": "./lib/actions/postRuleChangeCollection.js",
+            "title": "Creates a RuleChange resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postRuleChangeCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteRuleChangeItem": {
+            "main": "./lib/actions/deleteRuleChangeItem.js",
+            "title": "Removes the RuleChange resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteRuleChangeItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRuleChangeItem": {
+            "main": "./lib/actions/getRuleChangeItem.js",
+            "title": "Retrieves a RuleChange resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRuleChangeItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRuleSetVersionCollection": {
+            "main": "./lib/actions/getRuleSetVersionCollection.js",
+            "title": "Retrieves the collection of RuleSetVersion resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRuleSetVersionCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRuleSetVersionItem": {
+            "main": "./lib/actions/getRuleSetVersionItem.js",
+            "title": "Retrieves a RuleSetVersion resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRuleSetVersionItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "clearRuleSetVersionItem": {
+            "main": "./lib/actions/clearRuleSetVersionItem.js",
+            "title": "Clear a version",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/clearRuleSetVersionItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "publishRuleSetVersionItem": {
+            "main": "./lib/actions/publishRuleSetVersionItem.js",
+            "title": "Publish a version",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/publishRuleSetVersionItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRuleCollection": {
+            "main": "./lib/actions/getRuleCollection.js",
+            "title": "Retrieves the collection of Rule resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRuleCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRuleItem": {
+            "main": "./lib/actions/getRuleItem.js",
+            "title": "Retrieves a Rule resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRuleItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getComputedStatisticCollection": {
+            "main": "./lib/actions/getComputedStatisticCollection.js",
+            "title": "Retrieves the collection of ComputedStatistic resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getComputedStatisticCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postUserOrganizationCollection": {
+            "main": "./lib/actions/postUserOrganizationCollection.js",
+            "title": "Creates a UserOrganization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postUserOrganizationCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteUserOrganizationItem": {
+            "main": "./lib/actions/deleteUserOrganizationItem.js",
+            "title": "Removes the UserOrganization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteUserOrganizationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserOrganizationItem": {
+            "main": "./lib/actions/getUserOrganizationItem.js",
+            "title": "Retrieves a UserOrganization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserOrganizationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putUserOrganizationItem": {
+            "main": "./lib/actions/putUserOrganizationItem.js",
+            "title": "Replaces the UserOrganization resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putUserOrganizationItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserProjectFlattenedItem": {
+            "main": "./lib/actions/getUserProjectFlattenedItem.js",
+            "title": "Retrieves a UserProjectFlattened resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserProjectFlattenedItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postUserProjectCollection": {
+            "main": "./lib/actions/postUserProjectCollection.js",
+            "title": "Creates a UserProject resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postUserProjectCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteUserProjectItem": {
+            "main": "./lib/actions/deleteUserProjectItem.js",
+            "title": "Removes the UserProject resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteUserProjectItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserProjectItem": {
+            "main": "./lib/actions/getUserProjectItem.js",
+            "title": "Retrieves a UserProject resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserProjectItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putUserProjectItem": {
+            "main": "./lib/actions/putUserProjectItem.js",
+            "title": "Replaces the UserProject resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putUserProjectItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserCollection": {
+            "main": "./lib/actions/getUserCollection.js",
+            "title": "Retrieves the collection of User resources.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postUserCollection": {
+            "main": "./lib/actions/postUserCollection.js",
+            "title": "Creates a User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postUserCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postForgotPasswordRequestCollection": {
+            "main": "./lib/actions/postForgotPasswordRequestCollection.js",
+            "title": "Creates a ForgotPasswordRequest resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postForgotPasswordRequestCollection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "forgot_passwordUserItem": {
+            "main": "./lib/actions/forgot_passwordUserItem.js",
+            "title": "Replaces the User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/forgot_passwordUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "deleteUserItem": {
+            "main": "./lib/actions/deleteUserItem.js",
+            "title": "Removes the User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserItem": {
+            "main": "./lib/actions/getUserItem.js",
+            "title": "Retrieves a User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "confirm_new_emailUserItem": {
+            "main": "./lib/actions/confirm_new_emailUserItem.js",
+            "title": "Retrieves a User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/confirm_new_emailUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "edit_emailUserItem": {
+            "main": "./lib/actions/edit_emailUserItem.js",
+            "title": "Replaces the User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/edit_emailUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "edit_infoUserItem": {
+            "main": "./lib/actions/edit_infoUserItem.js",
+            "title": "Replaces the User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/edit_infoUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "edit_passwordUserItem": {
+            "main": "./lib/actions/edit_passwordUserItem.js",
+            "title": "Replaces the User resource.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                },
+                "body_content_type": {
+                    "viewClass": "SelectView",
+                    "label": "Body Content-Type",
+                    "required": true,
+                    "prompt": "Choose a body Content-Type.",
+                    "model": {
+                        "application/ld+json": "application/ld+json",
+                        "application/json": "application/json",
+                        "text/html": "text/html",
+                        "text/csv": "text/csv"
+                    }
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/edit_passwordUserItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

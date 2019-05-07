@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "organizationId": {
+            "required": true,
+            "type": "string"
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

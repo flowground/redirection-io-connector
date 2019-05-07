@@ -1,0 +1,93 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "projectId": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt": {
+            "required": false,
+            "type": "string"
+        },
+        "source": {
+            "required": false,
+            "type": "string"
+        },
+        "target": {
+            "required": false,
+            "type": "string"
+        },
+        "statusCode": {
+            "required": false,
+            "type": "string"
+        },
+        "referrer": {
+            "required": false,
+            "type": "string"
+        },
+        "userAgent": {
+            "required": false,
+            "type": "string"
+        },
+        "userAgentType": {
+            "required": false,
+            "type": "string"
+        },
+        "simplifiedUserAgent": {
+            "required": false,
+            "type": "string"
+        },
+        "ruleId": {
+            "required": false,
+            "type": "string"
+        },
+        "instanceName": {
+            "required": false,
+            "type": "string"
+        },
+        "excludeUrls": {
+            "required": false,
+            "type": "string"
+        },
+        "excludeEmptyReferrer": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_gt": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_gte": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_lt": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_lte": {
+            "required": false,
+            "type": "string"
+        },
+        "statusCode_gt": {
+            "required": false,
+            "type": "string"
+        },
+        "statusCode_gte": {
+            "required": false,
+            "type": "string"
+        },
+        "statusCode_lt": {
+            "required": false,
+            "type": "string"
+        },
+        "statusCode_lte": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

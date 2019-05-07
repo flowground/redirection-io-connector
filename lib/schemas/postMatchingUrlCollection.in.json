@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "project": {
+                    "type": "string"
+                },
+                "ruleChange": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

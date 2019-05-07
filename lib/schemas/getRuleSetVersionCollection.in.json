@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "projectId": {
+            "required": true,
+            "type": "string"
+        },
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "sort_createdAt_": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

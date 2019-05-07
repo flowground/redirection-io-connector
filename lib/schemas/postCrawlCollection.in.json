@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "concurrency": {},
+                "firstUrl": {},
+                "includeSubdomain": {},
+                "maxUrls": {},
+                "project": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "project",
+                "firstUrl",
+                "concurrency",
+                "maxUrls",
+                "includeSubdomain"
+            ],
+            "type": "object"
+        }
+    }
+}

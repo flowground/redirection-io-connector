@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "csvContent": {},
+                "project": {
+                    "type": "string"
+                },
+                "shouldEnable": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "project",
+                "csvContent"
+            ],
+            "type": "object"
+        }
+    }
+}

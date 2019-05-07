@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "projectId": {
+            "required": true,
+            "type": "string"
+        },
+        "isEnabled": {
+            "required": false,
+            "type": "boolean"
+        },
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "isEnabled__": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "boolean"
+            }
+        },
+        "sort_id_": {
+            "required": false,
+            "type": "string"
+        },
+        "sort_viewCount_": {
+            "required": false,
+            "type": "string"
+        },
+        "sort_isEnabled_": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "targetId": {
+            "required": true,
+            "type": "string"
+        },
+        "targetType": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

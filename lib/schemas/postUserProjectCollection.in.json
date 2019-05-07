@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "functionalRoles": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "project": {
+                    "type": "string"
+                },
+                "user": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "user",
+                "project",
+                "functionalRoles"
+            ],
+            "type": "object"
+        }
+    }
+}

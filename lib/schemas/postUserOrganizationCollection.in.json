@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "functionalRoles": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "organization": {
+                    "readOnly": true,
+                    "type": "string"
+                },
+                "user": {
+                    "readOnly": true,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "functionalRoles"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "id": {},
+                "maximumOccurrence": {
+                    "type": "integer"
+                },
+                "minimumOccurrence": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "options": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "regex": {
+                    "type": "string"
+                },
+                "transformers": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type",
+                "name"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "action": {
+                    "type": "string"
+                },
+                "actions": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "examples": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "formattedSource": {
+                    "type": "string"
+                },
+                "isEnabled": {
+                    "type": "boolean"
+                },
+                "markers": {
+                    "items": {
+                        "description": "",
+                        "properties": {
+                            "maximumOccurrence": {
+                                "type": "integer"
+                            },
+                            "minimumOccurrence": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "options": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "transformers": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "matchOnResponseStatus": {
+                    "type": "integer"
+                },
+                "rank": {
+                    "type": "integer"
+                },
+                "ruleId": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "action",
+                "source",
+                "isEnabled",
+                "rank"
+            ],
+            "type": "object"
+        }
+    }
+}

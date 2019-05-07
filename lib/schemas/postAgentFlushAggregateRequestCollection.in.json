@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "description": "",
+            "properties": {
+                "instanceName": {},
+                "instanceTime": {},
+                "logs": {}
+            },
+            "required": [
+                "logs",
+                "instanceName",
+                "instanceTime"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "projectId": {
+            "required": true,
+            "type": "string"
+        },
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "createdAt_before_": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_strictly_before_": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_after_": {
+            "required": false,
+            "type": "string"
+        },
+        "createdAt_strictly_after_": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
